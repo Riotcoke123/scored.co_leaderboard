@@ -1,0 +1,17 @@
+{
+  "name": "leaderboard",
+  "version": "1.0.0",
+  "description": "IP2Always & Spictank Rankings Leaderboard",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pm2": "^6.0.13"
+  }
+}
