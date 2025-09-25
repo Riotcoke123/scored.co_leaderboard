@@ -1,0 +1,134 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 10px 100px; /* Bottom padding ensures space for the fixed bottom bar */
+    line-height: 1.5;
+}
+
+.logo-image {
+    width: 200px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* * Table Styling (Desktop First) * Clean, responsive table with alternating row colors. */
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    /* Removed overflow: hidden; to ensure borders are visible */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    background-color: #111;
+    text-align: center; /* Center all text in the table */
+}
+
+th, td {
+    padding: 12px 15px;
+    word-wrap: break-word;
+    text-align: center; /* Ensure all cells are centered */
+    /* ADDED: 1px solid white border to all header and data cells */
+    border: 1px solid rgb(0, 0, 0); 
+}
+
+th {
+    background-color: #800080; /* Purple header */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Define specific column widths */
+th:nth-child(1), td:nth-child(1) {
+    width: 8%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 41%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 20%;
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 30%;
+}
+
+/* Zebra striping for readability */
+tr:nth-child(even) {
+    background-color: #222;
+}
+
+tr:nth-child(odd) {
+    background-color: #333;
+}
+
+/* * Hyperlink Styling * Clear links with hover feedback. */
+td a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* * Responsive Table Adjustments */
+@media (max-width: 768px) {
+    table {
+        max-width: 100%;
+    }
+    th, td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+}
+
+/* * Bottom Fixed Navigation Bar * Sticky, responsive footer with centered links. */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    text-align: center; /* Center text in bottom bar */
+}
+
+.bottom-bar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.2s;
+    text-align: center; /* Ensure links are centered */
+}
+
+.bottom-bar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Stack the bottom bar links on very small screens */
+@media (max-width: 480px) {
+    .bottom-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+}
